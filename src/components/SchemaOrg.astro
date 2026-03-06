@@ -1,0 +1,51 @@
+---
+interface Props {
+  type?: 'website' | 'organization' | 'faq';
+  faqItems?: Array<{ question: string; answer: string }>;
+}
+
+const { type = 'website', faqItems = [] } = Astro.props;
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Made In Vibe Coding",
+  "url": "https://madeinvibecoding.com",
+  "logo": "https://madeinvibecoding.com/images/logo.png",
+  "description": "A maior comunidade brasileira de IA, Automação e Vibe Coding.",
+  "email": "script7sistemas@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Brasília",
+    "addressRegion": "DF",
+    "addressCountry": "BR"
+  },
+  "sameAs": []
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Made In Vibe Coding",
+  "url": "https://madeinvibecoding.com",
+  "description": "A maior comunidade brasileira de IA, Automação e Vibe Coding.",
+  "inLanguage": "pt-BR"
+};
+
+const faqSchema = faqItems.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+} : null;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+{faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}

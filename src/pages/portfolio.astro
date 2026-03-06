@@ -94,7 +94,10 @@ const projects = [
                 <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent z-10"></div>
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`Screenshot do projeto ${project.title} - ${project.description.substring(0, 60)}`}
+                  width="600"
+                  height="224"
+                  loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23111%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23444%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 font-family=%22monospace%22 dy=%22.3em%22%3EProjeto%3C/text%3E%3C/svg%3E'"
                 />
@@ -136,7 +139,10 @@ const projects = [
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-10"></div>
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`Screenshot do projeto ${project.title} - ${project.description.substring(0, 60)}`}
+                  width="400"
+                  height="176"
+                  loading="lazy"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23111%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23444%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 font-family=%22monospace%22 dy=%22.3em%22%3EProjeto%3C/text%3E%3C/svg%3E'"
                 />
