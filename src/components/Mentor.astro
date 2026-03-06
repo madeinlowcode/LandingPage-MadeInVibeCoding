@@ -1,0 +1,182 @@
+---
+const techStack = [
+  "Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind", "Supabase"
+];
+---
+
+<section id="mentor" class="py-24 bg-black-section">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Badge superior -->
+    <div class="text-center mb-12 animate-on-scroll">
+      <span class="badge badge-orange">
+        O MENTOR
+      </span>
+    </div>
+
+    <!-- Título -->
+    <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+        Compartilhando conhecimento que <span class="gradient-orange">transforma</span>
+      </h2>
+      <p class="text-secondary text-lg leading-relaxed">
+        12 anos desenvolvendo software e atualmente CEO da <span class="text-white font-medium">Script7 Software</span>
+      </p>
+    </div>
+
+    <!-- Layout dois lados -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center animate-on-scroll">
+      <!-- Lado esquerdo (informações) -->
+      <div>
+        <!-- Stack que eu 💖 -->
+        <div class="glass-card p-6 mb-8">
+          <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span>Stack que eu</span>
+            <span class="text-2xl">💖</span>
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            {techStack.map((tech) => (
+              <span class="px-4 py-2 bg-[rgba(255,107,0,0.1)] border border-[rgba(255,107,0,0.2)] text-orange-brand font-mono text-sm hover:bg-[rgba(255,107,0,0.2)] transition-colors duration-300 cursor-default">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <!-- Paixão por Ensinar -->
+        <div class="glass-card p-6 mb-8">
+          <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-orange-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+            Paixão por Ensinar
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-orange-brand mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-secondary">Aprendo constantemente para compartilhar</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-orange-brand mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-secondary">Transformo conhecimento em experiências práticas</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-orange-brand mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-secondary">Acredito no poder da comunidade e colaboração</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pra quem acha que sou um Avatar 😆 -->
+        <div class="glass-card p-6 mb-8">
+          <!-- Glow effect -->
+          <div class="absolute -top-20 -right-20 w-40 h-40 bg-orange-brand opacity-10 blur-[60px]"></div>
+
+          <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span>Pra quem acha que sou um Avatar</span>
+            <span class="text-xl">😆</span>
+          </h3>
+          <blockquote class="text-secondary leading-relaxed mb-4 italic">
+            "Pai de duas crianças, marido e adorador de um Deus maravilhoso. Acredito que cada conquista é fruto da graça divina."
+          </blockquote>
+          <div class="flex items-center gap-3 pt-4 border-t border-orange-brand/20">
+            <svg class="w-5 h-5 text-orange-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            <p class="text-orange-brand font-mono text-sm">"Até aqui nos ajudou o Senhor." - 1 Samuel 7:12</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lado direito (avatar/foto) -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative">
+          <!-- Avatar container -->
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+            <!-- Animated border -->
+            <div class="absolute inset-0 bg-gradient-to-br from-orange-brand to-orange-light animate-spin-slow blur-sm opacity-75"></div>
+
+            <!-- Main image container -->
+            <div class="relative w-full h-full p-2 glass-card overflow-hidden">
+              <div class="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] flex items-center justify-center overflow-hidden">
+                <!-- Foto do perfil -->
+                <img src="/images/perfil.png" alt="Giovani Júnior" class="w-full h-full object-cover" />
+              </div>
+              <!-- Nome sobreposto -->
+              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                <p class="font-syne font-bold text-white text-xl text-center">Giovani Júnior</p>
+                <p class="font-mono text-xs text-secondary text-center mt-1">@madeinvibecoding</p>
+              </div>
+            </div>
+
+            <!-- Online status badge -->
+            <div class="absolute bottom-4 right-4 lg:right-8 flex items-center gap-2 px-4 py-2 glass-card">
+              <div class="w-2 h-2 bg-green-500 animate-pulse"></div>
+              <span class="font-mono text-xs text-secondary">Online</span>
+            </div>
+
+            <!-- Fale Comigo button -->
+            <a href="https://wa.me/5561995562618" target="_blank" class="absolute -bottom-4 left-1/2 -translate-x-1/2 btn-primary px-6 py-3 text-white font-semibold text-sm whitespace-nowrap">
+              Fale Comigo
+            </a>
+          </div>
+
+          <!-- Floating elements -->
+          <div class="absolute top-0 -left-8 glass-card px-4 py-3 animate-float">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🚀</span>
+              <span class="font-mono text-xs text-secondary">12+ anos<br />de experiência</span>
+            </div>
+          </div>
+
+          <div class="absolute bottom-20 -right-4 glass-card px-4 py-3 animate-float" style="animation-delay: 1s;">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">💼</span>
+              <span class="font-mono text-xs text-secondary">CEO &<br />Fundador</span>
+            </div>
+          </div>
+
+          <div class="absolute top-20 -right-12 glass-card px-4 py-3 animate-float" style="animation-delay: 0.5s;">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">⚡</span>
+              <span class="font-mono text-xs text-secondary">3 anos<br />Vibe Coding</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>

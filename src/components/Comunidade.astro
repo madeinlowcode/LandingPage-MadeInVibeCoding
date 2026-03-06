@@ -1,0 +1,80 @@
+---
+const features = [
+  {
+    icon: `M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z`,
+    title: "Meets Semanais",
+    description: "Encontros ao vivo toda semana com sessoes praticas de coding, analise de projetos reais e discussoes estrategicas sobre o mercado de IA"
+  },
+  {
+    icon: `M13 10V3L4 14h7v7l9-11h-7z`,
+    title: "Projetos Praticos",
+    description: "Construa aplicacoes reais do zero usando as melhores praticas do mercado. Do MVP ao deploy, voce aprende fazendo e nao apenas assistindo"
+  },
+  {
+    icon: `M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z`,
+    title: "Estudo de Mercado",
+    description: "Analise semanal das tendencias, oportunidades e mudancas no ecossistema de IA. Saiba onde investir seu tempo antes da concorrencia"
+  },
+  {
+    icon: `M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15`,
+    title: "Conteudos Atualizados",
+    description: "Material didatico constantemente renovado acompanhando a evolucao das ferramentas e frameworks. Nunca fique desatualizado"
+  },
+  {
+    icon: `M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z`,
+    title: "Suporte Exclusivo",
+    description: "Tire duvidas diretamente com mentores experientes. Code review, arquitetura e estrategia - tudo disponivel quando voce precisar"
+  },
+  {
+    icon: `M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656.126-1.283.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z`,
+    title: "Comunidade Exclusiva",
+    description: "Networking com profissionais que estao construindo produtos reais com IA. Compartilhe experiencias, desafios e conquistas com quem entende"
+  },
+  {
+    icon: `M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z`,
+    title: "Drive Exclusivo de Conteudos",
+    description: "Biblioteca completa com templates, snippets, checklists e guias praticos. Todo o arsenal necessario para acelerar seu desenvolvimento"
+  },
+  {
+    icon: `M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253`,
+    title: "Mentorias",
+    description: "Sessoes individuais de mentoria com precos diferenciados para alunos. Acelere seu aprendizado com orientacao personalizada"
+  }
+];
+---
+
+<section id="comunidade" class="py-24 bg-black-section">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Badge superior -->
+    <div class="text-center mb-12 animate-on-scroll">
+      <span class="font-mono text-xs text-orange-brand uppercase tracking-widest bg-[rgba(255,107,0,0.1)] px-4 py-2  border border-[rgba(255,107,0,0.2)]">
+        MADEINVIBECODING
+      </span>
+    </div>
+    
+    <!-- Titulo e descricao -->
+    <div class="text-center max-w-4xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+        O que acontece na <span class="gradient-orange">Made In Vibe Coding</span>
+      </h2>
+      <p class="text-secondary text-lg lg:text-xl leading-relaxed">
+        A Made In Vibe Coding nao e mais um curso. Somos a sua plataforma estrategica para dominar o desenvolvimento de software com Inteligencia Artificial de forma profissional e sustentavel.
+      </p>
+    </div>
+    
+    <!-- Grid de 8 cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-on-scroll">
+      {features.map((feature) => (
+        <div class="glass-card rounded-none p-6 card-hover group">
+          <div class="w-12 h-12 rounded-none bg-gradient-to-br from-orange-brand to-orange-light flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(255,107,0,0.3)] group-hover:shadow-[0_0_30px_rgba(255,107,0,0.5)] transition-all duration-300 text-white">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon} />
+            </svg>
+          </div>
+          <h3 class="text-lg font-extrabold text-white mb-3">{feature.title}</h3>
+          <p class="text-secondary text-sm leading-relaxed">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

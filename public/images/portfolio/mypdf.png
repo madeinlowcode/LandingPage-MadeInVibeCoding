@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+  <rect fill="#111111" width="800" height="600"/>
+  <rect fill="#FF6B00" x="100" y="80" width="600" height="80" rx="8"/>
+  <rect fill="#1A1A1A" x="100" y="180" width="280" height="350" rx="8"/>
+  <rect fill="#1A1A1A" x="420" y="180" width="280" height="350" rx="8"/>
+  <text fill="#FFFFFF" x="50%" y="50%" text-anchor="middle" font-family="monospace" font-size="28">myPDF.AI</text>
+  <text fill="#666666" x="50%" y="55%" text-anchor="middle" font-family="monospace" font-size="14">AI-Powered PDF Processing</text>
+</svg>

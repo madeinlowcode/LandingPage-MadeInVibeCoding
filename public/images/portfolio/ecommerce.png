@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+  <rect fill="#111111" width="800" height="600"/>
+  <rect fill="#FF6B00" x="50" y="50" width="200" height="150" rx="8"/>
+  <rect fill="#FF8C3A" x="300" y="50" width="200" height="150" rx="8"/>
+  <rect fill="#FF6B00" x="550" y="50" width="200" height="150" rx="8"/>
+  <rect fill="#1A1A1A" x="50" y="230" width="700" height="320" rx="8"/>
+  <text fill="#FFFFFF" x="50%" y="50%" text-anchor="middle" font-family="monospace" font-size="24">E-commerce</text>
+  <text fill="#666666" x="50%" y="55%" text-anchor="middle" font-family="monospace" font-size="14">Full Stack Platform</text>
+</svg>

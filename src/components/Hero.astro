@@ -1,0 +1,55 @@
+---
+import HeroAsciiMascot from '../components/HeroAsciiMascot.astro';
+---
+
+<section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 dot-grid overflow-hidden">
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-orange-brand opacity-5 blur-[120px]"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Texto -->
+      <div class="text-center lg:text-left animate-on-scroll">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+          <span class="gradient-orange block">Crie software profissional</span>
+          <span class="gradient-orange block">com I.A.</span>
+          <span class="text-white block mt-3 text-2xl sm:text-3xl lg:text-4xl">sem cair nas armadilhas</span>
+          <span class="text-white block text-2xl sm:text-3xl lg:text-4xl">da internet</span>
+        </h1>
+
+        <p class="text-secondary text-base sm:text-lg max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
+          Promessas milagrosas venderam a ilusão de criar produtos complexos apenas conversando com I.A., mas a realidade cobra o preço quando você descobre que precisava de fundamentos o tempo todo.
+        </p>
+
+        <a href="#planos" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-semibold text-base group mb-8">
+          Preciso aprender da maneira certa
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
+
+        <div class="flex items-center justify-center lg:justify-start gap-3">
+          <div class="flex">
+            <img src="/images/alunos/aluno1.png" alt="Aluno" class="w-10 h-10 rounded-none border-2 border-black-base object-cover" />
+            <img src="/images/alunos/aluno2.png" alt="Aluno" class="w-10 h-10 rounded-none border-2 border-black-base object-cover" />
+            <img src="/images/alunos/aluno3.png" alt="Aluno" class="w-10 h-10 rounded-none border-2 border-black-base object-cover" />
+            <img src="/images/alunos/aluno4.png" alt="Aluno" class="w-10 h-10 rounded-none border-2 border-black-base object-cover" />
+            <img src="/images/alunos/aluno5.png" alt="Aluno" class="w-10 h-10 rounded-none border-2 border-black-base object-cover" />
+          </div>
+          <p class="text-secondary text-sm font-medium">
+            <span class="text-white font-semibold">+ 50 alunos</span> estão aprendendo com agente
+          </p>
+        </div>
+      </div>
+
+      <!-- Mascote ASCII 3D Interativo - Claude Code -->
+      <div class="animate-on-scroll">
+        <div class="relative">
+          <div class="absolute -top-20 -right-20 w-40 h-40 bg-orange-brand opacity-10 blur-[60px]"></div>
+          <HeroAsciiMascot />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

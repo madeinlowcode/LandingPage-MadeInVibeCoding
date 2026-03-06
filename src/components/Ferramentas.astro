@@ -1,0 +1,116 @@
+---
+const tools = [
+  "Claude Code", "Lovable", "Bolt.new", "Cline.dev", "Augment Code",
+  "Codex CLI", "Gemini CLI", "Qwen Code", "n8n", "Trae",
+  "Windsurf", "Jules", "Dyad", "Readdy", "HatchCanvas"
+];
+
+const duplicatedTools = [...tools, ...tools];
+---
+
+<section id="ferramentas" class="py-24 bg-[#111111]">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Badge superior -->
+    <div class="text-center mb-12 animate-on-scroll">
+      <span class="font-mono text-xs text-[#FF6B00] uppercase tracking-widest bg-[rgba(255,107,0,0.1)] px-4 py-2  border border-[rgba(255,107,0,0.2)]">
+        FERRAMENTAS EM CAMPO
+      </span>
+    </div>
+    
+    <!-- Título e descrição -->
+    <div class="text-center max-w-4xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+        Domine as <span class="gradient-orange">ferramentas</span> que importam
+      </h2>
+      <p class="text-[#A0A0A0] text-lg lg:text-xl leading-relaxed">
+        Aprenda a escolher e operar as tecnologias certas para o seu nível de conhecimento e objetivos, maximizando produtividade desde o primeiro dia.
+      </p>
+    </div>
+    
+    <!-- Marquee de logos -->
+    <div class="relative mb-16 overflow-hidden animate-on-scroll">
+      <!-- Gradient overlays -->
+      <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#111111] to-transparent z-10"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#111111] to-transparent z-10"></div>
+      
+      <!-- Marquee content -->
+      <div class="marquee-content flex gap-8 py-6">
+        {duplicatedTools.map((tool, index) => (
+          <div class="flex-shrink-0 px-8 py-4 glass-card rounded-none flex items-center justify-center min-w-[180px] card-hover">
+            <span class="font-mono text-sm text-[#A0A0A0] group-hover:text-white transition-colors duration-300">{tool}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <!-- Card explicativo -->
+    <div class="glass-card rounded-none p-8 lg:p-12 mb-12 animate-on-scroll">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-[700] text-white mb-4">
+            Por que essas ferramentas?
+          </h3>
+          <p class="text-[#A0A0A0] leading-relaxed mb-6">
+            Testamos mais de 50 ferramentas para que você não precise. Cada uma das selecionadas tem um propósito específico e foi validada em projetos reais. Aprenda quando usar cada uma e evite o "analysis paralysis".
+          </p>
+          
+          <!-- Stats badges -->
+          <div class="flex flex-wrap gap-4">
+            <div class="flex items-center gap-3 px-5 py-3 rounded-none bg-[rgba(255,107,0,0.1)] border border-[rgba(255,107,0,0.2)]">
+              <span class="font-[Syne] font-bold text-2xl text-[#FF6B00]">+50</span>
+              <span class="font-mono text-xs text-[#A0A0A0] uppercase tracking-wide">Ferramentas<br />testadas</span>
+            </div>
+            <div class="flex items-center gap-3 px-5 py-3 rounded-none bg-[rgba(255,107,0,0.1)] border border-[rgba(255,107,0,0.2)]">
+              <span class="font-[Syne] font-bold text-2xl text-[#FF6B00]">15+</span>
+              <span class="font-mono text-xs text-[#A0A0A0] uppercase tracking-wide">Recomendadas</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Visual element -->
+        <div class="relative">
+          <div class="glass-card rounded-none p-6">
+            <div class="space-y-4">
+              <!-- Tool comparison visual -->
+              <div class="flex items-center gap-4 p-4 rounded-none bg-[rgba(255,107,0,0.1)] border border-[rgba(255,107,0,0.2)]">
+                <div class="w-10 h-10 rounded-none bg-gradient-to-br from-[#FF6B00] to-[#FF8C3A] flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-white font-semibold text-sm">Validadas em Produção</p>
+                  <p class="text-[#A0A0A0] text-xs">Testes reais, não apenas demos</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4 p-4 rounded-none bg-[rgba(255,107,0,0.1)] border border-[rgba(255,107,0,0.2)]">
+                <div class="w-10 h-10 rounded-none bg-gradient-to-br from-[#FF6B00] to-[#FF8C3A] flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-white font-semibold text-sm">Curadoria Especializada</p>
+                  <p class="text-[#A0A0A0] text-xs">Apenas o que funciona</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4 p-4 rounded-none bg-[rgba(255,107,0,0.1)] border border-[rgba(255,107,0,0.2)]">
+                <div class="w-10 h-10 rounded-none bg-gradient-to-br from-[#FF6B00] to-[#FF8C3A] flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-white font-semibold text-sm">Atualização Constante</p>
+                  <p class="text-[#A0A0A0] text-xs">Sempre em dia com o mercado</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

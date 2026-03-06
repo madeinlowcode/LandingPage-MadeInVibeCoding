@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+  <rect fill="#111111" width="800" height="600"/>
+  <rect fill="#FF6B00" x="50" y="50" width="300" height="200" rx="8"/>
+  <rect fill="#FF8C3A" x="450" y="50" width="300" height="200" rx="8"/>
+  <rect fill="#1A1A1A" x="50" y="280" width="700" height="270" rx="8"/>
+  <text fill="#FFFFFF" x="50%" y="50%" text-anchor="middle" font-family="monospace" font-size="24">Finance Dashboard</text>
+  <text fill="#666666" x="50%" y="55%" text-anchor="middle" font-family="monospace" font-size="14">Financial Analytics</text>
+</svg>
