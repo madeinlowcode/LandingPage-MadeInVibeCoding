@@ -23,26 +23,30 @@
         <a href="#planos" class="btn-primary text-white font-semibold" style="padding: 8px 20px; font-size: 12px;">Quero fazer parte</a>
       </div>
 
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-white">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
+      <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center text-white" aria-label="Abrir menu">
+        <span class="hamburger-bar hamburger-bar-1"></span>
+        <span class="hamburger-bar hamburger-bar-2"></span>
+        <span class="hamburger-bar hamburger-bar-3"></span>
       </button>
     </div>
   </div>
-  
-  <div id="mobile-menu" class="lg:hidden hidden absolute top-full left-0 right-0 glass-nav border-t border-orange-brand/20">
-    <div class="px-6 py-4 flex flex-col gap-4">
-      <a href="#home" class="text-secondary hover:text-orange-brand transition-colors duration-300 text-sm font-mono py-2">Home</a>
-      <a href="#comunidade" class="text-secondary hover:text-orange-brand transition-colors duration-300 text-sm font-mono py-2">Comunidade</a>
-      <a href="/portfolio" class="text-secondary hover:text-orange-brand transition-colors duration-300 text-sm font-mono py-2">Portfólio</a>
-      <a href="#ferramentas" class="text-secondary hover:text-orange-brand transition-colors duration-300 text-sm font-mono py-2">Ferramentas</a>
-      <a href="#mentor" class="text-secondary hover:text-orange-brand transition-colors duration-300 text-sm font-mono py-2">Mentor</a>
-      <a href="#planos" class="text-secondary hover:text-orange-brand transition-colors duration-300 text-sm font-mono py-2">Planos</a>
-      <a href="#faq" class="text-secondary hover:text-orange-brand transition-colors duration-300 text-sm font-mono py-2">FAQ</a>
-      <div class="pt-4 border-t border-orange-brand/20 flex flex-col gap-3">
-        <a href="https://plataforma.madeinvibecoding.com/" target="_blank" class="text-secondary hover:text-white transition-colors duration-300 text-sm font-mono text-center">Fazer login</a>
-        <a href="#planos" class="btn-primary px-6 py-3  text-white font-semibold text-sm text-center">Quero fazer parte</a>
+
+  <!-- Overlay backdrop -->
+  <div id="mobile-overlay" class="mobile-overlay lg:hidden"></div>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="mobile-menu lg:hidden">
+    <div class="px-6 py-4 flex flex-col gap-1">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#comunidade" class="mobile-link">Comunidade</a>
+      <a href="/portfolio" class="mobile-link">Portfólio</a>
+      <a href="#ferramentas" class="mobile-link">Ferramentas</a>
+      <a href="#mentor" class="mobile-link">Mentor</a>
+      <a href="#planos" class="mobile-link">Planos</a>
+      <a href="#faq" class="mobile-link">FAQ</a>
+      <div class="pt-4 mt-2 border-t border-orange-brand/20 flex flex-col gap-1">
+        <a href="https://plataforma.madeinvibecoding.com/" target="_blank" class="mobile-link text-center">Fazer login</a>
+        <a href="#planos" class="btn-primary px-6 py-3 text-white font-semibold text-sm text-center mt-2">Quero fazer parte</a>
       </div>
     </div>
   </div>
@@ -50,18 +54,53 @@
 
 <script>
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('glass-nav', 'border-t', 'border-orange-brand/20');
-    } else {
-      navbar.classList.remove('glass-nav', 'border-t', 'border-orange-brand/20');
-    }
-  });
-  
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  const mobileOverlay = document.getElementById('mobile-overlay');
+  let menuOpen = false;
+
+  // Scroll navbar glass effect
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar?.classList.add('glass-nav', 'border-t', 'border-orange-brand/20');
+    } else {
+      navbar?.classList.remove('glass-nav', 'border-t', 'border-orange-brand/20');
+    }
+  });
+
+  function openMenu() {
+    menuOpen = true;
+    mobileMenu?.classList.add('is-open');
+    mobileOverlay?.classList.add('is-visible');
+    mobileMenuBtn?.classList.add('is-active');
+    mobileMenuBtn?.setAttribute('aria-label', 'Fechar menu');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menuOpen = false;
+    mobileMenu?.classList.remove('is-open');
+    mobileOverlay?.classList.remove('is-visible');
+    mobileMenuBtn?.classList.remove('is-active');
+    mobileMenuBtn?.setAttribute('aria-label', 'Abrir menu');
+    document.body.style.overflow = '';
+  }
+
+  // Toggle menu
   mobileMenuBtn?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
+    if (menuOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Fechar ao clicar no overlay
+  mobileOverlay?.addEventListener('click', closeMenu);
+
+  // Fechar ao clicar em links anchor
+  mobileMenu?.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', closeMenu);
   });
 </script>
 
@@ -76,5 +115,87 @@
   }
   .nav-link:hover {
     color: #FF6B00;
+  }
+
+  /* Hamburger animado */
+  .hamburger-bar {
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .hamburger-bar-1 {
+    transform: translateY(-7px);
+  }
+  .hamburger-bar-2 {
+    transform: translateY(0);
+  }
+  .hamburger-bar-3 {
+    transform: translateY(7px);
+  }
+
+  /* Estado ativo - X */
+  .is-active .hamburger-bar-1 {
+    transform: translateY(0) rotate(45deg);
+  }
+  .is-active .hamburger-bar-2 {
+    opacity: 0;
+  }
+  .is-active .hamburger-bar-3 {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  /* Menu mobile - slide down com max-height */
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 107, 0, 0.2);
+  }
+  .mobile-menu.is-open {
+    max-height: 500px;
+  }
+
+  /* Links mobile com touch target de 44px */
+  .mobile-link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 8px;
+    color: #888;
+    font-size: 0.875rem;
+    font-family: 'DM Sans', monospace;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  .mobile-link:hover,
+  .mobile-link:active {
+    color: #FF6B00;
+  }
+
+  /* Overlay backdrop */
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  .mobile-overlay.is-visible {
+    opacity: 1;
+    pointer-events: auto;
   }
 </style>

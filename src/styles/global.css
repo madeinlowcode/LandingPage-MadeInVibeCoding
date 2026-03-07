@@ -291,3 +291,27 @@
   border-radius: 0;
   background: #22c55e;
 }
+
+/* Safe area utilities */
+.safe-area-pt { padding-top: env(safe-area-inset-top); }
+.safe-area-pb { padding-bottom: env(safe-area-inset-bottom); }
+
+/* Mobile overflow prevention */
+html, body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Prevent horizontal scroll from absolute positioned elements */
+main, section {
+  overflow-x: clip;
+}
+
+/* Better touch targets for mobile links */
+@media (max-width: 768px) {
+  footer a, nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
